@@ -1,0 +1,294 @@
+/* colors */
+:root {
+  --bs-primary: #3e6ae1;
+  --bs-primary-rgb: 62, 106, 225;
+}
+
+.grey {
+  background-color: #f4f4f4;
+  --bs-btn-bg: #f4f4f4;
+  --bs-btn-hover-bg: #f4f4f4;
+}
+
+.tint {
+  background-color: #e2e3e5;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+/* buttons */
+.btn-primary {
+  --bs-btn-bg: #3e6ae1;
+  --bs-btn-border-color: #3e6ae1;
+  --bs-btn-hover-bg: #3457b1;
+  --bs-btn-hover-border-color: #3457b1;
+}
+
+.btn-light {
+  --bs-btn-bg: #fff;
+  --bs-btn-border-color: #fff;
+  --bs-btn-hover-bg: #f4f4f4;
+  --bs-btn-hover-border-color: #f4f4f4;
+}
+
+.btn {
+  --bs-btn-padding-y: 6px;
+  --bs-btn-padding-x: 13px;
+  --bs-btn-font-size: 14px;
+  --bs-btn-font-weight: 500;
+  --bs-btn-border-radius: 4px;
+}
+
+.bar {
+  --bs-btn-bg: #f4f4f4;
+  --bs-btn-border-color: #f4f4f4;
+}
+
+/* text */
+.gradient {
+  background: linear-gradient(90deg, #171a20 10%, #3e6ae1 40%, #3e6ae1 60%, #171a20 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.label {
+  font-size: 18px;
+  color: #5c5e62;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.number {
+  font-size: 34px;
+}
+
+.intro {
+  font-size: 19px;
+}
+
+.caption {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.offer {
+  font-size: 34px;
+}
+
+.note {
+  font-size: 20px;
+}
+
+.legal {
+  font-size: 11px;
+}
+
+.links {
+  font-weight: 500;
+}
+
+/* navbar */
+.navbar {
+  --bs-navbar-padding-y: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+
+.navbar-toggler {
+  font-size: 12px;
+  line-height: 1.35;
+  padding: 3px 10px;
+  margin-right: -6px;
+}
+
+.navbar-brand img {
+  filter: invert(1);
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: #f4f4f4;
+}
+
+/* hero */
+.banner {
+  aspect-ratio: 374 / 850;
+}
+
+.video {
+  aspect-ratio: 3 / 4;
+}
+
+.charge {
+  min-height: 70vh;
+}
+
+/* swipe */
+.swipe {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  scroll-padding-left: 8px;
+  scroll-padding-right: 8px;
+}
+
+.item {
+  width: 330px;
+  scroll-snap-align: start;
+}
+
+.item .card {
+  height: 520px;
+}
+
+.item .card-img {
+  height: 100%;
+}
+
+.item h2 {
+  font-size: 40px;
+}
+
+.overlay {
+  background: linear-gradient(transparent 45%, rgba(0, 0, 0, 0.55));
+}
+
+/* carousel */
+.carousel .carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  border: 0;
+  border-radius: 50%;
+  background-color: #171a20;
+}
+
+.hero .carousel-indicators [data-bs-target] {
+  background-color: #fff;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin: -20px 48px 0;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.spaced .carousel-item {
+  padding-right: 24px;
+}
+
+.spaced .carousel-inner {
+  margin-right: -24px;
+}
+
+/* phones */
+@media (max-width: 991.98px) {
+  .heading {
+    font-size: 40px;
+  }
+
+  .hero .btn {
+    --bs-btn-padding-y: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+/* desktop */
+@media (min-width: 992px) {
+  .navbar {
+    --bs-navbar-padding-y: 8px;
+    position: relative;
+    background: #fff;
+  }
+
+  .navbar-brand img {
+    filter: none;
+  }
+
+  .banner {
+    aspect-ratio: 2.82;
+  }
+
+  .video {
+    aspect-ratio: auto;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .intro {
+    font-size: calc(20.4px + 0.3vw);
+  }
+
+  .offer {
+    font-size: calc(21.2px + 0.9vw);
+  }
+
+  .note {
+    font-size: 16px;
+  }
+
+  .photo {
+    --bs-aspect-ratio: 100%;
+  }
+
+  .btn {
+    --bs-btn-padding-y: 9px;
+    --bs-btn-padding-x: 12px;
+    --bs-btn-font-size: 15px;
+    min-width: 160px;
+  }
+
+  .wide {
+    min-width: 200px;
+  }
+
+  .legal {
+    font-size: 14px;
+  }
+
+  .links {
+    font-weight: 400;
+  }
+
+  .bar {
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: #dee2e6;
+    --bs-btn-hover-border-color: #dee2e6;
+  }
+}
+
+@media (min-width: 1200px) {
+  .intro {
+    font-size: 20px;
+  }
+
+  .offer {
+    font-size: 32px;
+  }
+}

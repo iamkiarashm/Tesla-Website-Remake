@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tesla</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- navbar -->
+  <div class="navbar navbar-expand-lg">
+    <div class="container-fluid px-3 px-lg-5">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo1.png" alt="Tesla" height="24">
+      </a>
+      <button class="navbar-toggler border-0 rounded-1 bg-secondary bg-opacity-50 text-white fw-bold" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu"
+        aria-label="Toggle navigation">
+        Menu
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <div class="navbar-nav mx-auto">
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Vehicles</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Energy</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Charging</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Robotaxi</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Semi</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Discover</a></div>
+          <div class="nav-item"><a class="nav-link small medium text-dark rounded-2 px-3 py-1" href="#">Shop</a></div>
+        </div>
+        <div class="d-flex gap-3 fs-5 mt-2 mt-lg-0 px-3 px-lg-0">
+          <a href="#" class="text-dark"><i class="bi bi-question-circle"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-globe"></i></a>
+          <a href="#" class="text-dark"><i class="bi bi-person-circle"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- menu -->
+  <div class="offcanvas offcanvas-end w-100 d-lg-none" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+    <div class="offcanvas-header justify-content-end px-4 pt-4">
+      <h5 class="offcanvas-title visually-hidden" id="mobileMenuLabel">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-0 pt-4">
+      <div class="nav flex-column">
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Vehicles <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Energy <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Charging <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Robotaxi <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Semi <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Discover <i class="bi bi-chevron-right text-secondary"></i></a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Shop </a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex justify-content-between align-items-center px-4 py-4 fw-semibold text-dark" href="#">Support </a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex align-items-center px-4 py-3 text-dark" href="#">
+            <i class="bi bi-globe fs-5 me-3"></i>
+            <span>
+              <span class="d-block fw-semibold">United States</span>
+              <span class="d-block small text-secondary">English</span>
+            </span>
+            <i class="bi bi-chevron-right ms-auto"></i>
+          </a>
+        </div>
+        <div class="nav-item">
+          <a class="nav-link d-flex align-items-center px-4 py-3 fw-semibold text-dark" href="#">
+            <i class="bi bi-person-circle fs-5 me-3"></i>Account
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- hero -->
+  <div id="heroCarouselMobile" class="carousel carousel-dark slide hero d-lg-none" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarouselMobile" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarouselMobile" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/hero2-mobile.png" class="d-block w-100 banner cover" alt="Model 3">
+        <div class="position-absolute top-0 start-0 end-0 text-center text-white pt-5 mt-3">
+          <h1 class="display-4 medium">Model 3</h1>
+          <p class="fs-5"><a href="#" class="text-white">1.99% APR Available</a></p>
+          <div class="d-flex justify-content-center gap-2 px-3">
+            <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+            <a href="#" class="btn btn-light flex-fill">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/hero3.png" class="d-block w-100 banner cover" alt="Model Y">
+        <div class="position-absolute top-0 start-0 end-0 text-center text-white pt-5 mt-3">
+          <h1 class="display-4 medium">Model Y</h1>
+          <p class="fs-5"><a href="#" class="text-white">2.49% APR Available</a></p>
+          <div class="d-flex justify-content-center gap-2 px-3">
+            <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+            <a href="#" class="btn btn-light flex-fill">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="heroCarousel" class="carousel carousel-dark slide hero d-none d-lg-block" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <img src="images/hero1.png" class="d-block w-100 banner cover" alt="Roadster">
+        <div class="position-absolute top-0 start-0 end-0 text-center text-white pt-5 mt-3 mt-lg-0">
+          <img src="images/logo2.png" alt="Roadster" class="d-block mx-auto col-8 col-lg-5 mb-5">
+          <div class="d-flex justify-content-center gap-2 px-3 px-lg-0">
+            <a href="#" class="btn btn-primary wide flex-fill flex-lg-grow-0">Reserve Now</a>
+            <a href="#" class="btn btn-light wide flex-fill flex-lg-grow-0">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/hero2.png" class="d-block w-100 banner cover" alt="Model 3">
+        <div class="position-absolute top-0 start-0 end-0 text-center text-white pt-5 mt-3 mt-lg-0">
+          <h1 class="display-4 medium">Model 3</h1>
+          <p class="fs-5"><a href="#" class="text-white">Lease From $439/mo</a></p>
+          <div class="d-flex justify-content-center gap-2 px-3 px-lg-0">
+            <a href="#" class="btn btn-primary wide flex-fill flex-lg-grow-0">Order Now</a>
+            <a href="#" class="btn btn-light wide flex-fill flex-lg-grow-0">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="images/hero3.png" class="d-block w-100 banner cover" alt="Model Y">
+        <div class="position-absolute top-0 start-0 end-0 text-center text-white pt-5 mt-3 mt-lg-0">
+          <h1 class="display-4 medium">Model Y</h1>
+          <p class="fs-5"><a href="#" class="text-white">2.49% APR Available</a></p>
+          <div class="d-flex justify-content-center gap-2 px-3 px-lg-0">
+            <a href="#" class="btn btn-primary wide flex-fill flex-lg-grow-0">Order Now</a>
+            <a href="#" class="btn btn-light wide flex-fill flex-lg-grow-0">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next d-none d-lg-flex" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container-fluid px-2 px-lg-5">
+
+    <!-- fsd -->
+    <div class="grey rounded-4 overflow-hidden mt-4">
+      <div class="row g-0">
+        <div class="col-lg-5 px-3 px-lg-5 pt-3 pt-lg-4 pb-3 pb-lg-5">
+          <h2 class="display-6 fw-semibold mb-0 heading"><span class="gradient d-inline-block">Full Self-Driving (Supervised)</span></h2>
+          <p class="label subtitle">Makes every drive easier. Subscribe for $99/mo.<sup>1</sup></p>
+          <div class="d-none d-lg-block">
+          <div class="d-flex gap-5 mt-4 mb-5">
+            <div>
+              <div class="fs-2 fw-semibold">7x</div>
+              <div class="label">Fewer Collisions</div>
+            </div>
+            <div>
+              <div class="fs-2 fw-semibold">17,032,704,745</div>
+              <div class="label">Miles Driven</div>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-dark wide">Schedule Demo</a>
+            <a href="#" class="btn btn-light wide">Learn More</a>
+          </div>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <video class="w-100 h-100 cover video" autoplay muted loop playsinline>
+            <source src="images/video1.webm" type="video/webm">
+          </video>
+        </div>
+        <div class="col-12 d-lg-none px-3 py-4">
+          <div class="d-flex flex-column gap-4 mb-4">
+            <div>
+              <div class="number fw-semibold">7x</div>
+              <div class="label">Fewer Collisions</div>
+            </div>
+            <div>
+              <div class="number fw-semibold">17,032,704,745</div>
+              <div class="label">Miles Driven</div>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-dark flex-fill">Schedule Demo</a>
+            <a href="#" class="btn btn-light flex-fill">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- vehicles -->
+    <div class="mt-4">
+      <div class="swipe d-flex d-lg-none gap-3">
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/modelyl.png" class="card-img cover" alt="Model Y L Premium">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-3">
+              <span class="small fw-semibold">Long Wheelbase Midsize SUV</span>
+              <div>
+                <h2 class="display-5 medium">Model Y L Premium</h2>
+                <p class="caption">Starting at $61,990<sup>2</sup></p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/model3.png" class="card-img cover" alt="Model 3">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-3">
+              <span class="small fw-semibold">Sport Sedan</span>
+              <div>
+                <h2 class="display-5 medium">Model 3</h2>
+                <p class="caption"><a href="#" class="text-white">Lease From $439/mo</a></p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/modely.png" class="card-img cover" alt="Model Y">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-3">
+              <span class="small fw-semibold">Midsize SUV</span>
+              <div>
+                <h2 class="display-5 medium">Model Y</h2>
+                <p class="caption">Lease From $499/mo</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/cybertruck.png" class="card-img cover" alt="Cybertruck">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-3">
+              <span class="small fw-semibold">Utility Truck</span>
+              <div>
+                <h2 class="display-5 medium">CyberTruck</h2>
+                <p class="caption">Lease From $1,129/mo</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/roadster-mobile.png" class="card-img cover" alt="Roadster">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <img src="images/roadster-logo-white.png" alt="Roadster" class="d-block w-100 mb-3">
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Reserve Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/cpo.png" class="card-img cover" alt="Certified Pre-Owned">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <h2 class="display-5 medium">Certified Pre-Owned</h2>
+                <p class="caption">Fully inspected, refurbished and road ready with an extended one-year warranty.</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">View Inventory</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="vehicleCarousel" class="carousel carousel-dark slide spaced d-none d-lg-block">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/modelyl.png" class="card-img cover" alt="Model Y L Premium">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-4">
+                    <span class="small fw-semibold">Long Wheelbase Midsize SUV</span>
+                    <div class="px-3">
+                      <h2 class="display-5 medium">Model Y L Premium</h2>
+                      <p>Starting at $61,990<sup>2</sup></p>
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/model3.png" class="card-img cover" alt="Model 3">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-4">
+                    <span class="small fw-semibold">Sport Sedan</span>
+                    <div class="px-3">
+                      <h2 class="display-5 medium">Model 3</h2>
+                      <p><a href="#" class="text-white">Lease From $439/mo</a></p>
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/modely.png" class="card-img cover" alt="Model Y">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-4">
+                    <span class="small fw-semibold">Midsize SUV</span>
+                    <div class="px-3">
+                      <h2 class="display-5 medium">Model Y</h2>
+                      <p>Lease From $499/mo</p>
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/cybertruck.png" class="card-img cover" alt="Cybertruck">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-between p-4">
+                    <span class="small fw-semibold">Utility Truck</span>
+                    <div class="px-3">
+                      <h2 class="display-5 medium">CyberTruck</h2>
+                      <p>Lease From $1,129/mo</p>
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">Order Now</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+                  <div class="carousel-item">
+            <div class="row g-4">
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/roadster.png" class="card-img cover" alt="Roadster">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                    <div class="px-3">
+                      <img src="images/roadster-logo-white.png" alt="Roadster" class="d-block col-8 mb-3">
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">Reserve Now</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                  <img src="images/cpo.png" class="card-img cover" alt="Certified Pre-Owned">
+                  <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                    <div class="px-3">
+                      <h2 class="display-5 medium">Certified Pre-Owned</h2>
+                      <p>Fully inspected, refurbished and road ready with an extended one-year warranty.</p>
+                      <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-primary">View Inventory</a>
+                        <a href="#" class="btn btn-light">Learn More</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-next d-none d-lg-flex" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#vehicleCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <div class="carousel-indicators position-static mt-4">
+          <button type="button" data-bs-target="#vehicleCarousel" data-bs-slide-to="0" class="active"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#vehicleCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#vehicleCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- offers -->
+    <div class="mt-4">
+      <div class="row g-3 g-lg-4">
+        <div class="col-lg-6">
+          <div class="grey rounded-4 overflow-hidden h-100">
+            <div class="row g-0 h-100">
+              <div class="col-12 col-lg-8 px-3 px-lg-5 py-4">
+                <h3 class="offer medium mt-2">Current Offers</h3>
+                <p class="note text-secondary">Explore limited-time offers on Tesla vehicles.</p>
+                <a href="#" class="btn btn-light px-4 px-lg-5">Learn More</a>
+              </div>
+              <div class="col-12 col-lg-4 order-first order-lg-last d-flex align-items-center">
+                <div class="ratio ratio-21x9">
+                  <img src="images/cars.png" class="cover" alt="Current offers">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="grey rounded-4 overflow-hidden h-100">
+            <div class="row g-0 h-100">
+              <div class="col-12 col-lg-8 px-3 px-lg-5 py-4">
+                <h3 class="offer medium mt-2">2026 Annual Shareholder Meeting</h3>
+                <p class="note text-secondary">The future of Tesla is in your hands. Learn why your vote matters.</p>
+                <a href="#" class="btn btn-light px-4 px-lg-5">Learn More</a>
+              </div>
+              <div class="col-12 col-lg-4 order-first order-lg-last">
+                <div class="ratio ratio-21x9 photo">
+                  <img src="images/rdstr.png" class="cover" alt="Shareholder meeting">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- charge -->
+  <div class="charge d-flex align-items-end">
+    <div class="container-fluid px-2 px-lg-5">
+      <div class="px-2 px-lg-5 py-4 py-lg-5">
+        <div class="row justify-content-between">
+          <div class="col-lg-8">
+            <h2 class="display-6 medium heading">Find Your Charge</h2>
+            <p class="text-secondary intro">View the network of Tesla Superchargers and Destination Chargers available near you.</p>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-dark px-4 flex-fill flex-lg-grow-0">View Network</a>
+              <a href="#" class="btn grey px-4 flex-fill flex-lg-grow-0">Learn More</a>
+            </div>
+          </div>
+          <div class="col-auto d-none d-lg-flex gap-5">
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="display-6 medium">1,413</span>
+                <svg class="flex-shrink-0" width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                  <circle cx="23" cy="23" r="23" fill="#ea4840"/>
+                  <path d="M26.5 9 14 25.5h7.5L19.5 37 32 20.5h-7.8z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="fs-5 text-secondary">Superchargers</div>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-2">
+                <span class="display-6 medium">8</span>
+                <svg class="flex-shrink-0" width="46" height="46" viewBox="0 0 46 46" aria-hidden="true">
+                  <circle cx="23" cy="23" r="23" fill="#8e8e8e"/>
+                  <g fill="#fff">
+                    <rect x="17" y="9" width="3.5" height="9" rx="1.5"/>
+                    <rect x="25.5" y="9" width="3.5" height="9" rx="1.5"/>
+                    <path d="M13 17h20v6a10 10 0 0 1-8 9.8V37h-4v-4.2A10 10 0 0 1 13 23z"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="fs-5 text-secondary">Destination Chargers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- energy -->
+  <div class="container-fluid px-2 px-lg-5 mt-5">
+      <div class="swipe d-flex d-lg-none gap-3">
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/solar.png" class="card-img cover" alt="Solar Panels">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <h2 class="display-5 medium">Solar Panels</h2>
+                <p class="caption">Power Your Home and Reduce Your Electricity Bill</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/powerwall.png" class="card-img cover" alt="Powerwall">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <h2 class="display-5 medium">Powerwall</h2>
+                <p class="caption">Keep Your Lights On During Outages</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/mega.png" class="card-img cover" alt="Megapack">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <h2 class="display-5 medium">Megapack</h2>
+                <p class="caption">Utility-Scale Energy Storage</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item flex-shrink-0">
+          <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+            <img src="images/solar.png" class="card-img cover" alt="Solar Panels">
+            <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-3">
+              <div>
+                <h2 class="display-5 medium">Solar Panels</h2>
+                <p class="caption">Power Your Home and Reduce Your Electricity Bill</p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-primary flex-fill">Order Now</a>
+                  <a href="#" class="btn btn-light flex-fill">Learn More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="energyCarousel" class="carousel carousel-dark slide spaced d-none d-lg-block">
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                <img src="images/solar.png" class="card-img cover" alt="Solar Panels">
+                <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                  <div class="px-3">
+                    <h2 class="display-5 medium">Solar Panels</h2>
+                    <p>Power Your Home and Reduce Your Electricity Bill</p>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a href="#" class="btn btn-light">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                <img src="images/powerwall.png" class="card-img cover" alt="Powerwall">
+                <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                  <div class="px-3">
+                    <h2 class="display-5 medium">Powerwall</h2>
+                    <p>Keep Your Lights On During Outages</p>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a href="#" class="btn btn-light">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-6">
+              <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                <img src="images/mega.png" class="card-img cover" alt="Megapack">
+                <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                  <div class="px-3">
+                    <h2 class="display-5 medium">Megapack</h2>
+                    <p>Utility-Scale Energy Storage</p>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a href="#" class="btn btn-light">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="card text-bg-dark border-0 rounded-4 overflow-hidden">
+                <img src="images/solar.png" class="card-img cover" alt="Solar Panels">
+                <div class="card-img-overlay overlay d-flex flex-column justify-content-end p-4">
+                  <div class="px-3">
+                    <h2 class="display-5 medium">Solar Panels</h2>
+                    <p>Power Your Home and Reduce Your Electricity Bill</p>
+                    <div class="d-flex gap-2">
+                      <a href="#" class="btn btn-primary">Order Now</a>
+                      <a href="#" class="btn btn-light">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev d-none d-lg-flex" type="button" data-bs-target="#energyCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next d-none d-lg-flex" type="button" data-bs-target="#energyCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      <div class="carousel-indicators position-static mt-4">
+        <button type="button" data-bs-target="#energyCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#energyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="container-fluid px-2 px-lg-5 mt-4">
+    <p class="text-secondary legal mb-3 mb-lg-1"><sup>1</sup> Price reflects monthly subscription, subject to terms and
+      conditions. Price and feature availability subject to change.</p>
+    <p class="text-secondary legal"><sup>2</sup> Price listed does not include Destination and Order Fees, taxes and
+      other fees. Subject to change. The Model Y L Premium starting price including the Destination and Order Fees but
+      excluding taxes and other fees is $63,630.</p>
+    <div class="nav flex-column flex-lg-row align-items-center justify-content-center legal links mt-5 mt-lg-0 pt-5 pt-lg-4 pb-4">
+      <div class="nav-item"><span class="nav-link text-dark py-1 px-2">Tesla &copy; 2026</span></div>
+      <div class="nav-item"><a class="nav-link text-dark py-1 px-2" href="#">Privacy &amp; Legal</a></div>
+      <div class="nav-item"><a class="nav-link text-dark py-1 px-2" href="#">Vehicle Recalls</a></div>
+      <div class="nav-item d-none d-lg-block"><a class="nav-link text-dark py-1 px-2" href="#">Contact</a></div>
+      <div class="nav-item"><a class="nav-link text-dark py-1 px-2" href="#">News</a></div>
+      <div class="nav-item d-none d-lg-block"><a class="nav-link text-dark py-1 px-2" href="#">Get Updates</a></div>
+      <div class="nav-item d-none d-lg-block"><a class="nav-link text-dark py-1 px-2" href="#">Locations</a></div>
+      <div class="nav-item"><a class="nav-link text-dark py-1 px-2" href="#">Learn</a></div>
+    </div>
+  </div>
+
+  <!-- bar -->
+  <div class="sticky-bottom bg-white border-top py-2">
+    <div class="container-fluid px-3 px-lg-5">
+      <div class="row justify-content-center g-2 g-lg-3">
+        <div class="col-auto col-lg-4">
+          <a href="#" class="btn btn-light bar w-100 d-flex align-items-center">
+            <i class="bi bi-chat-left-dots-fill me-lg-2"></i>
+            <span class="d-none d-lg-inline me-2">Ask a Question</span>
+            <span class="d-none d-lg-inline text-secondary fw-normal">"What's Pet Mode?"</span>
+            <span class="d-none d-lg-inline ms-auto tint rounded px-1"><i class="bi bi-arrow-up text-white"></i></span>
+          </a>
+        </div>
+        <div class="col col-lg-2">
+          <a href="#" class="btn btn-light bar w-100"><i class="bi bi-disc-fill text-primary me-2"></i>Schedule a Drive Today</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
